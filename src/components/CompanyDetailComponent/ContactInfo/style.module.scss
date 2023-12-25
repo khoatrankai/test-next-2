@@ -1,0 +1,271 @@
+.contact_info_container {
+    .contact_info_content {
+
+        .company_information {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 24px;
+            margin-bottom: 24px;
+
+            @media screen and (max-width: 850px) {
+                flex-direction: column;
+            }
+
+            .company_information_left {
+                width: 100%;
+
+                .company_information_describe {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    align-items: flex-start;
+                    margin-bottom: 24px;
+
+                    h3 {
+                        font-family: Roboto;
+                        font-size: 20px;
+                        font-weight: 700;
+                        letter-spacing: 0em;
+                        text-align: left;
+                    }
+
+                    textarea {
+                        padding: 0;
+                        pointer-events: none;
+                        border: none;
+                        outline: none;
+                        background: transparent;
+                        font-family: Roboto;
+                        font-size: 14px;
+                        font-weight: 400;
+                        letter-spacing: 0em;
+                        text-align: justify;
+                        text-indent: 12px;
+                    }
+                }
+
+                .company_information_basic {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    align-items: flex-start;
+
+                    h3 {
+                        font-family: Roboto;
+                        font-size: 20px;
+                        font-weight: 700;
+                        letter-spacing: 0em;
+                        text-align: left;
+                    }
+
+                    ul {
+                        list-style-type: none;
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        gap: 16px;
+                        align-items: flex-start;
+
+                        li {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+
+                            svg {
+                                min-width: 24px;
+                            }
+
+                            p {
+                                font-family: Roboto;
+                                font-size: 12px;
+                                font-weight: 400;
+                                letter-spacing: 0px;
+
+                                span {
+                                    font-family: Roboto;
+                                    font-size: 12px;
+                                    font-weight: 700;
+                                    letter-spacing: 0px;
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .company_information_right {
+                width: 100%;
+
+                h3 {
+                    font-family: Roboto;
+                    font-size: 20px;
+                    font-weight: 700;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    margin-bottom: 24px;
+                }
+
+                .leaf_let_map {
+                    height: 430px;
+                    z-index: 1;
+
+                    .leaflet-control-attribution {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .company_image {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            h3 {
+                font-family: Roboto;
+                font-size: 20px;
+                font-weight: 700;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+
+            .company_role_images {
+                // border: 1px solid #ccc;
+                padding: 0;
+                border-radius: 5px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                // cursor: pointer;
+                // height: 310px;
+
+                &:hover {
+                    border-color: #d4a650;
+                }
+
+                .drag_img_container {
+                    // min-height: 150px;
+
+                    .dropzone {
+                        position: absolute;
+                        border: 1px solid transparent;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        flex: 1;
+                        gap: 8px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        // padding: 20px;
+                        border-radius: 2px;
+                        background-color: transparent;
+                        color: #bdbdbd;
+                        outline: none;
+                        transition: border .24s ease-in-out;
+                        justify-content: center;
+                        z-index: 1;
+
+                        .drag_img_camera {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 8px;
+                            justify-content: center;
+
+                            p {
+                                font-size: 12px;
+                                font-weight: 400;
+                                letter-spacing: 0px;
+                            }
+                        }
+
+                        .thumbs-containter {
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            gap: 16px;
+                            width: 100%;
+
+                            .thumb {
+                                display: inline-flex;
+                                border-radius: 2;
+                                border: 1px solid #eaeaea;
+                                margin-bottom: 8;
+                                margin-right: 8;
+                                width: 100;
+                                height: 100;
+                                padding: 4;
+                                box-sizing: border-box;
+
+                                .thumb-inner {
+                                    display: flex;
+                                    min-width: 0;
+                                    overflow: hidden;
+                                    position: relative;
+
+                                    img {
+                                        display: block;
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .on-drag {
+                        border: 1px dashed #d4a650;
+                        background-color: #e3e2e2;
+                        color: #d4a650;
+                        transition: all 0.2s ease-in-out;
+                    }
+                }
+
+                .list_iamges {
+                    display: flex;
+                    width: 100%;
+                    // justify-content: space-between;
+                    flex-wrap: wrap;
+                    gap: 8px;
+
+                    .item_image {
+                        position: relative;
+                        // margin-right: 12px;
+                        height: 176px;
+                        width: 185px;
+
+                        img {
+                            border: 1px solid #ccc;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+
+            .noImage_company {
+                display: flex;
+                align-items: center;
+
+                p {
+                    font-size: 12px;
+                    font-weight: 400;
+                    letter-spacing: 0em;
+                    text-align: justify;
+                    text-indent: 12px;
+                    line-height: 1;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+
+        }
+    }
+}

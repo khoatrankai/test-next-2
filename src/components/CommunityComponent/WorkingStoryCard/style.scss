@@ -1,0 +1,189 @@
+.comunitypostNew-card-wrap_content {
+    border: 1px solid #ccc;
+    padding: 12px 24px;
+    border-radius: 12px;
+    margin: 24px 0;
+    cursor: pointer;
+    // position: relative;
+    // z-index: -1;
+
+    // .bookmark {
+    //     position: absolute;
+    //     right: 12px;
+    //     top: 12px;
+    // }
+
+    .comunityPostNew-card-content {
+
+        .comunityPostNew-card-content-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+
+            h3 {
+                color: #000;
+                font-family: Roboto;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 30px;
+                width: 75%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+
+            }
+
+            .bookmark {
+                // position: absolute;
+                // right: 12px;
+                // top: 12px;
+            }
+        }
+
+        .comunityPostNew-card-content_info {
+            padding: 4px 0;
+            border-bottom: 1px solid #ccc;
+
+            .text-content_postNew {
+                height: 47px;
+                // overflow: hidden;
+                line-height: 24px;
+                word-wrap: break-word;
+                overflow: hidden;
+                font-size: 14px;
+                text-indent: 12px;
+                li {
+                    color: #000;
+                    font-family: Roboto;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    list-style: none;
+                    margin-left: 12px;
+                }
+
+                textarea {
+                    border: none;
+                    outline: none;
+                    background: transparent;
+
+                    &:focus {
+                        border: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+
+            .text-content_postNew.showText {
+                height: auto;
+                overflow: unset;
+            }
+
+
+
+            span {
+                color: #d4a650;
+                cursor: pointer;
+                font-size: 12px;
+            }
+        }
+
+    }
+
+    .comunitypostNew-wrap_status {
+        display: flex;
+        padding: 12px 0;
+        // border-bottom: 1px solid #ccc;
+        gap: 16px;
+        flex-wrap: wrap;
+
+        .status-item {
+            display: flex;
+            align-items: center;
+
+            p {
+                margin-left: 8px;
+            }
+
+            svg {
+                color: white;
+                stroke: #575757;
+            }
+
+            &:nth-child(2) {
+
+                svg {
+                    // color: #d4a650;
+                    // stroke: white;
+                }
+            }
+
+        }
+
+        .liked {
+            svg {
+                color: #d4a650;
+                stroke: #ffffff;
+            }
+        }
+    }
+
+    .comunitypostNew-wrap_actor {
+        display: flex;
+        padding: 12px 0;
+        // align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .comunitypostNew-wrap {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 10px;
+                filter: blur(3px);
+            }
+
+            .info-actor_comunity {
+                margin-left: 12px;
+
+                p {
+                    &:nth-child(1) {
+                        color: #575757;
+                        font-family: Roboto;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 18px;
+                    }
+
+                    &:nth-child(2) {
+                        color: #000000;
+                        font-family: Roboto;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 24px;
+                    }
+                }
+
+            }
+        }
+
+        p {
+            color: #575757;
+            font-family: Roboto;
+            font-size: 12px;
+            font-style: italic;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+
+    }
+}

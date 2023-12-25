@@ -1,0 +1,17 @@
+.filter-company {
+    .ant-cascader-dropdown {
+        .ant-cascader-checkbox {
+            display: block !important;
+        }
+    }
+}
+
+.filter-cate-company {
+    // width: 100%;
+
+    .ant-cascader-menus {
+        .ant-cascader-menu {
+            height: 285px !important;
+        }
+    }
+}

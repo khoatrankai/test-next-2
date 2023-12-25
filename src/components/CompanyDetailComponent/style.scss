@@ -1,0 +1,35 @@
+.detail_company_tabs {
+  .ant-tabs {
+      .ant-tabs-nav {
+          .ant-tabs-tab {
+
+              p,
+              span {
+                  font-family: Roboto;
+                  font-size: 20px;
+                  font-weight: 400;
+                  letter-spacing: 0em;
+                  text-align: left;
+              }
+          }
+
+          .ant-tabs-tab-active {
+              p {
+                  color: #000000;
+              }
+
+              p,
+              span {
+                  font-weight: 700;
+              }
+          }
+
+          .ant-tabs-ink-bar {
+              height: 4px;
+              color: #d4a650;
+          }
+      }
+
+      .ant-tabs-content {}
+  }
+}

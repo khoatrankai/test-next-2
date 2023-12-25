@@ -1,0 +1,45 @@
+@import '../../scss/mixins';
+.container_chart {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    .chart {
+        max-width: 1080px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        .chart_itemsChart,
+        .chart_itemsCompanyCareChart {
+            .title_chart {
+                color:#001424;
+                font-size: 1.5rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 2rem; /* 133.333% */
+                margin-bottom: 20px;
+                
+            }
+            .row {
+                @include breakpoint(largeTablet){
+                    justify-content: space-evenly;
+                }
+            
+                @include breakpoint(destop){
+                    justify-content: space-evenly;
+                }
+            
+                @include breakpoint(an_order){
+                    justify-content: space-evenly;
+                }
+                gap: 24px;
+            }
+        }
+
+  
+    }
+}

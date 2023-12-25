@@ -1,0 +1,184 @@
+@import '../../scss/mixins';
+.new-job {
+    .MuiGrid-item {
+        @include breakpoint(mobile) {
+            height: 142px;
+        }
+    
+        @media (max-width: 768px) {
+            max-width: 100% !important;
+        }
+    }
+}
+
+.div-card-post-left {
+    width: 80%;
+
+    .MuiImageListItem-img {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .div-card-post-left_info {
+        padding: 0;
+        margin-left: 12px;
+        display: flex;
+        flex-direction: column;
+        height: 120px;
+        justify-content: space-between;
+        width: 80%;
+        p {
+            color: #575757;
+        }
+
+        @include breakpoint(mobile) {
+            width: 94%;
+        }
+
+        @include breakpoint(tablet) {
+            width: 90%;
+        }
+
+        @include breakpoint(largeTablet) {
+            width: 80%;
+        }
+
+        @media screen and (max-width: 624px) and (min-width: 500px) {
+            width: 80%;
+        }
+
+        @media screen and (max-width: 499px) and (min-width: 426px) {
+            width: 70%;
+        }
+
+        @media screen and (max-width: 1280px) and (min-width: 1240px) {
+            width: 90%;
+        }
+
+        @media screen and (max-width: 950px) and (min-width: 900px) {
+            width: 75%;
+        }
+    }
+
+    .MuiTypography-h6 {
+        @include breakpoint(mobile) {
+            font-size: 12px;
+            width: 75% !important;
+        }
+
+        @include breakpoint(tablet) {
+            // width: 90% !important
+        }
+
+        @include breakpoint(largeTablet) {
+            width: 100% !important;
+        }
+    }
+
+    .MuiTypography-h1 {
+        @include breakpoint(mobile) {
+            font-size: 10px;
+            width: 75% !important;
+        }
+
+        // @include breakpoint(tablet) {
+        //     width: 90% !important
+        // }
+
+        // @include breakpoint(largeTablet) {
+        //     width: 90% !important
+        // }
+    }
+
+    .MuiTypography-body2 {
+        @include breakpoint(mobile) {
+            font-size: 10px;
+            width: 65% !important;
+        }
+
+        @include breakpoint(tablet) {
+            width: 90% !important
+        }
+
+        @include breakpoint(largeTablet) {
+            width: 90% !important
+        }
+    }
+
+    .MuiImageListItem-root {
+        align-items: center;
+    }
+
+    @include breakpoint(mobile) {
+        width: 70%;
+        .MuiImageListItem-root {
+            display: flex;
+            align-items: flex-start !important;
+            .MuiImageListItem-img {
+                width: 82px !important;
+                height: 82px !important;
+                min-width: 82px !important;
+                min-height: 82px !important;
+            }
+
+            .div-card-post-left_info {
+                justify-content: unset !important;
+                .MuiTypography-root:nth-child(2),
+                .MuiTypography-root:nth-child(1) {
+                    width: 85% !important;
+                }
+                .text-card-post-left_info {
+                        .MuiTypography-root {
+                            width: 77% !important;
+                            color: #575757;
+                        }
+                    
+                }
+
+                .MuiTypography-root:nth-child(2) {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    &_info {
+        width: 100%;
+
+        // &__icon {
+            // font-size: small;
+        // }
+    }
+}
+
+.div-card-post-right {
+    width: 100px;
+    align-items: flex-end;
+
+    @include breakpoint(mobile) {
+        width: 30%;
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        height: 78%;
+        
+    }
+
+    @include breakpoint(tablet) {
+        width: 30%;
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        height: 82%;
+    }
+
+    @include breakpoint(largeTablet) {
+        width: 30%;
+    }
+
+    .img-resource-company {
+        height: 24px !important;
+        width: 24px !important;
+    }
+}

@@ -1,0 +1,30 @@
+.wrap__rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  .star__item {
+    position: relative;
+    display: grid;
+    place-items: center;
+
+    .star__overlay {
+      background: #fff;
+      height: 100%;
+      overflow: hidden;
+      // mix-blend-mode: color;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      .svg__iconStar {
+        height: 24px;
+        width: 24px;
+        fill: #d4a650;
+      }
+    }
+  }
+}

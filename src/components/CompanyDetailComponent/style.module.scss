@@ -1,0 +1,140 @@
+.detail_company_container {
+    .detail_company_content {
+        max-width: 1080px;
+        margin: 0 auto;
+
+        .detail_company_title {
+            margin-bottom: 24px;
+
+            h3 {
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 2.5rem;
+            }
+        }
+
+        .detail_company_intro {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+            gap: 40px;
+
+            .logo_company {
+                width: 120px;
+                height: 120px;
+                border-radius: 16px;
+                min-width: 120px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 16px;
+                }
+            }
+
+            .info_company {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 12px;
+
+                .company_name {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+
+                    h3 {
+                        font-family: Roboto;
+                        font-size: 24px;
+                        font-weight: 700;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        display: -webkit-box !important;
+                        -webkit-line-clamp: 2 !important;
+                        -webkit-box-orient: vertical !important;
+                        overflow: hidden !important;
+                    }
+
+                    .company_bell {
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        cursor: pointer;
+
+                        p {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                .company_address {
+                    display: flex;
+                    align-items: center;
+                    gap: 40px;
+
+                    @media screen and (max-width: 600px) {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 8px;
+                    }
+
+                    .address_item {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                    }
+
+                    p {
+                        font-family: Roboto;
+                        font-size: 16px;
+                        font-weight: 400;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        color: #575757;
+                    }
+                }
+            }
+        }
+
+        .detail_company_tabs {
+            .ant-tabs {
+                .ant-tabs-nav {
+                    .ant-tabs-tab {
+
+                        p,
+                        span {
+                            font-family: Roboto;
+                            font-size: 20px;
+                            font-weight: 400;
+                            letter-spacing: 0em;
+                            text-align: left;
+                        }
+                    }
+
+                    .ant-tabs-tab-active {
+                        p {
+                            color: #000000;
+                        }
+
+                        p,
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+
+                    .ant-tabs-ink-bar {
+                        height: 4px;
+                        color: #d4a650;
+                    }
+                }
+
+                .ant-tabs-content {}
+            }
+        }
+    }
+}

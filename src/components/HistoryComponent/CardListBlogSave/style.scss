@@ -1,0 +1,461 @@
+.list-blog-save-box {
+
+    .back-container {
+        padding: 10px 0;
+        p {
+            font-size: 16px;
+       
+        }
+    }
+
+    .title-comunity-news_icon {
+        display: flex;
+        gap: 12px;
+
+        .dropdown {
+            // padding: 20px 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            // background: #C06162;
+            // background: #34495e;
+            position: relative;
+            font-size: 18px;
+            perspective: 1000px;
+            // z-index: 100;
+
+            &:hover {
+                // background: #2980b9;
+                cursor: pointer;
+            }
+
+            // &:hover {
+            //     .dropdown_menu {
+            //         li {
+            //             display: block;
+            //         }
+            //     }
+            // }
+
+            .dropdown_menu {
+                position: absolute;
+                border-radius: 4px;
+                box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.08),
+                    0px -2px 7px 0px rgba(0, 0, 0, 0.07),
+                    0px -2px 5px 0px rgba(0, 0, 0, 0.01);
+                top: 160%;
+                right: 0;
+                width: 162px;
+                // width: 100%;
+                perspective: 1000px;
+                // z-index: -1;
+
+                li {
+                    // display: block;
+                    color: white;
+                    background-color: white;
+                    padding: 8px 12px 8px 12px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    opacity: 0;
+                    color: #000;
+                    gap: 12px;
+                    align-items: center;
+                    // justify-content: center;
+
+                    &:first-child {
+                        border-radius: 4px 4px 0 0;
+                    }
+
+                    &:nth-child(2) {
+                        border-bottom: 1px solid white;
+                    }
+
+                    &:last-child {
+                        border-radius: 0 0 4px 4px;
+                    }
+
+                    svg {
+                        color: white;
+                        stroke: #575757;
+                    }
+
+                    &:hover {
+                        color: white;
+                        background: #575757;
+
+                        svg {
+                            color: #575757;
+                            stroke: white;
+                        }
+                    }
+                }
+            }
+
+            .dropdown_menu-4 {
+                @for $i from 1 to 4 {
+                    .dropdown_item-#{$i} {
+                        transform-origin: top center;
+                        animation: scaleZ 300ms ($i * 60ms) ease-in-out forwards;
+                    }
+                }
+
+                @keyframes scaleZ {
+                    0% {
+                        opacity: 0;
+                        transform: scale(0);
+                    }
+
+                    80% {
+                        transform: scale(1.07);
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.list-blog-save-data {
+
+    .comunitypostNew-wrap_content {
+        border: 1px solid #ccc;
+        padding: 12px 24px;
+        border-radius: 12px;
+        margin: 24px 0;
+
+        .comunityPostNew-content {
+
+            .comunityPostNew-content-title {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                h3 {
+                    color: #001424;
+                    font-family: Roboto;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 24px;
+                }
+
+                svg {
+                    cursor: pointer;
+                }
+            }
+
+            // display: flex;
+
+            .comunityPostNew-content_info {
+                padding: 12px 0;
+                border-bottom: 1px solid #ccc;
+
+                .text-content_postNew {
+                    height: 90px;
+                    overflow: hidden;
+
+                    li {
+                        color: #000;
+                        font-family: Roboto;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 24px;
+                        list-style: none;
+                        margin-left: 12px;
+                    }
+                }
+
+                .text-content_postNew.showText {
+                    height: auto;
+                    overflow: unset;
+                }
+
+
+
+                span {
+                    color: #d4a650;
+                    cursor: pointer;
+                }
+            }
+
+        }
+
+        .comunitypostNew-wrap_status {
+            display: flex;
+            padding: 12px 0;
+            border-bottom: 1px solid #ccc;
+            gap: 30px;
+            flex-wrap: wrap;
+
+            .status-item {
+                display: flex;
+                align-items: center;
+
+                p {
+                    margin-left: 8px;
+                }
+
+                svg {
+                    color: white;
+                    stroke: #575757;
+                }
+
+                &:nth-child(2) {
+
+                    svg {
+                        // color: #d4a650;
+                        // stroke: white;
+                    }
+                }
+
+            }
+        }
+
+        .comunitypostNew-wrap_actor {
+            display: flex;
+            padding: 12px 0;
+            // align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .comunitypostNew-wrap {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 10px;
+                }
+
+                .info-actor_comunity {
+                    margin-left: 12px;
+
+                    p {
+                        &:nth-child(1) {
+                            color: #575757;
+                            font-family: Roboto;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 18px;
+                        }
+
+                        &:nth-child(2) {
+                            color: #000000;
+                            font-family: Roboto;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 24px;
+                        }
+                    }
+
+                }
+            }
+
+            p {
+                color: #575757;
+                font-family: Roboto;
+                font-size: 16px;
+                font-style: italic;
+                font-weight: 400;
+                line-height: 24px;
+            }
+
+
+        }
+    }
+
+    .comunitypostNews-wrap_content {
+        border: 1px solid #ccc;
+        padding: 24px 32px;
+        border-radius: 12px;
+        margin: 24px 0;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        min-height: 225px;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+
+        .comunitypostNews-wrap_content__left {
+            height: 100%;
+
+            span {
+                height: 225px;
+                width: 225px;
+                z-index: -1;
+
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+
+        }
+
+        .comunitypostNews-wrap_content__right {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            .comunityPostNews-content {
+
+                // display: flex;
+                .comunityPostNews-content-title {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    h3 {
+                        color: #001424;
+                        font-family: Roboto;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 24px;
+                    }
+
+                    svg {
+                        cursor: pointer;
+                    }
+                }
+
+                .comunityPostNews-content_info {
+                    padding: 12px 0 0;
+                    // border-bottom: 1px solid #ccc;
+
+                    .text-content_postNew {
+                        // height: 90px;
+                        // overflow: hidden;
+
+                        li {
+                            color: #000;
+                            font-family: Roboto;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 24px;
+                            list-style: none;
+                            margin-left: 12px;
+                        }
+                    }
+
+                    .text-content_postNew.showText {
+                        height: auto;
+                        overflow: unset;
+                    }
+
+
+
+                    span {
+                        color: #d4a650;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+            .comunityPostNews-interaction {
+
+                .comunitypostNew-wrap_actor {
+                    display: flex;
+                    padding: 12px 0;
+                    // align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 1px solid #ccc;
+                    flex-wrap: wrap;
+
+                    .comunitypostNew-wrap {
+                        display: flex;
+                        align-items: center;
+
+                        // img {
+                        //     width: 50px;
+                        //     height: 50px;
+                        //     border-radius: 25px;
+                        // }
+
+                        .info-actor_comunity {
+                            margin-left: 12px;
+
+                            p {
+                                &:nth-child(1) {
+                                    color: #575757;
+                                    font-family: Roboto;
+                                    font-size: 14px;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: 18px;
+                                }
+
+                                &:nth-child(2) {
+                                    color: #000000;
+                                    font-family: Roboto;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    line-height: 24px;
+                                }
+                            }
+
+                        }
+                    }
+
+                    p {
+                        color: #575757;
+                        font-family: Roboto;
+                        font-size: 16px;
+                        font-style: italic;
+                        font-weight: 400;
+                        line-height: 24px;
+                    }
+
+
+                }
+
+                .comunitypostNew-wrap_status {
+                    display: flex;
+                    padding: 12px 0 0;
+                    // border-bottom: 1px solid #ccc;
+                    gap: 30px;
+                    flex-wrap: wrap;
+
+                    .status-item {
+                        display: flex;
+                        align-items: center;
+
+                        p {
+                            margin-left: 8px;
+                        }
+
+                        svg {
+                            color: white;
+                            stroke: #575757;
+                        }
+
+                        &:nth-child(2) {
+
+                            // svg {
+                            //     color: #d4a650;
+                            //     stroke: white;
+                            // }
+                        }
+
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,80 @@
+.wrap-guide {
+  position: relative;
+
+  @media screen and (max-width: 375px) {
+    height: 435px;
+    overflow-y: scroll;
+  }
+
+  .title-post_guide {
+    color: #000;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .wrap-imagePost_guide {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0;
+  }
+
+  .wrap-textPost_guide {
+    margin-bottom: 12px;
+
+    p {
+      color: #000;
+      text-align: center;
+      font-family: Roboto;
+      font-size: 16px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+
+  .wrap-button_haveCompany {
+    display: flex;
+    gap: 24px;
+    @media screen and (max-width: 375px) {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+
+  .wrap-list_guide {
+    border: 1px solid #aaa;
+    border-radius: 12px;
+
+    ul {
+      padding: 12px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+
+      svg {
+        min-width: 20px;
+        height: 20px;
+        margin-right: 8px;
+      }
+
+      li {
+        margin-bottom: 12px;
+        list-style: none;
+        display: flex;
+        align-items: flex-start;
+        color: #000;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+  }
+}

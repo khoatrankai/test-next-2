@@ -1,0 +1,54 @@
+.filter-candidate {
+    position: relative;
+    width: 100%;
+    .filter-input_candidate {
+        position: absolute;
+        z-index: 8;
+        top: 8px;
+        left: 10px;
+    }
+
+    .ant-select {
+        width: 100% !important;
+        .ant-select-selector {
+            .ant-select-selection-item {
+                margin-left: 20px;
+                font-size: 12px;
+            }
+
+            .ant-select-selection-placeholder {
+                margin-left: 20px;
+                font-size: 12px;
+
+            }
+        }
+    }
+}
+
+.wrap-radio_candidateAge {
+    padding-bottom: 12px;
+    .title-search_age {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 0;
+
+        h3 {
+
+        }
+
+    }
+    
+    .ant-radio-group {
+        margin: 12px 0;
+    }
+
+    .ant-space-item {
+        input {
+            padding: 12px 8px;
+            text-align: center;
+        }
+    }
+
+
+}

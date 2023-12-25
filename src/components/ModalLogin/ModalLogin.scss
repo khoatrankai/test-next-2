@@ -1,0 +1,40 @@
+
+.button-login {
+  background-color: #d4a650;
+  width: 100%;
+  padding: 8px 0px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+
+.wrap-countDown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 12px;
+
+  .resend-otp {
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #d4a650;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .resend-otp_countDown {
+    margin-left: 4px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: '#5d5d5d ';
+  }
+}

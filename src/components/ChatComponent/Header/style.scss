@@ -1,0 +1,22 @@
+.header-message_left {
+  margin-right: 12px;
+  .icon-message {
+    svg {
+      font-size: 20px;
+    }
+  }
+}
+
+.header-message_right {
+  display: flex;
+  flex-direction: column;
+  .header-message_Title {
+    margin: 0;
+  }
+
+  .header-message_text {
+    color: #ecbf41;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}

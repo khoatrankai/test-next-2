@@ -1,0 +1,132 @@
+.item-candidate-history {
+    // padding: 12px 16px;
+    display: flex;
+    gap: 12px;
+    border-radius: 12px;
+    // box-shadow: 1px 1px 5px #e7e7ed;
+    // height: 200px;
+    cursor: pointer;
+    width: 100%;
+
+    .wrap-img_candidate {
+        // height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        border-radius: 12px;
+        // max-width: 120px;
+        min-width: 120px;
+        // box-shadow: 1px 1px 5px #Ccc;
+        // border: 1px solid #ccc;
+
+        .img-candidate {
+            width: 76px;
+            min-height: 76px;
+            height: 76px;
+            object-fit: cover;
+            border-radius: 4px;
+            // height: 100%;
+            filter: blur(3px);
+            @media screen and (max-width: 350px) {
+                width: 118px;
+            }
+        }
+
+        .wrap-name-age {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-direction: column;
+
+            .wrap-name-age_item {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                color: #575757;
+
+                .icon-age_item-candidate {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .info-candidate {
+        // flex: 3;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+
+        h3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 16px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            li {
+                list-style: none;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1rem;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                flex-wrap: nowrap;
+                word-break: break-all;
+
+                .item-infoUser {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                    span {}
+                }
+
+                .icon-info-candidate {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .text-info-candidate {
+                    // display: inline-block;
+                    white-space: nowrap;
+                    width: 160px;
+                    word-break: break-all;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    color: #575757;
+                    font-size: 12px;
+                    font-weight: 400;
+
+                    @media screen and (max-width: 400px) {
+                        width: 130px;
+                    }
+
+                    @media screen and (max-width: 370px) {
+                        width: 100px;
+                    }
+
+                    @media screen and (max-width: 320px) {
+                        width: 80px;
+                    }
+                }
+            }
+        }
+    }
+}

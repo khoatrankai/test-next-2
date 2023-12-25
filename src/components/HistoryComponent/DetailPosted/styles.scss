@@ -1,0 +1,26 @@
+.image-cadidate_wrap {
+  width: 120px;
+
+  border-radius: 50%;
+  // background-color: #aaa;
+
+  .image-cadidate {
+    min-width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    object-fit: cover;
+
+  }
+}
+
+.item-candidate {
+  display: flex;
+  align-items: center;
+
+  // margin: 4px;
+  .icon-candidate {
+    margin: 0 8px;
+    font-size: 15px;
+    color: #575757;
+  }
+}

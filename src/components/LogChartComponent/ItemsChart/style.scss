@@ -1,0 +1,10 @@
+@import '../../../scss/mixins';
+
+.col_left__itemsChart {
+    svg {
+        @include breakpoint(mobile){
+            height: 30px;
+            width: 30px;
+        }
+    }
+}

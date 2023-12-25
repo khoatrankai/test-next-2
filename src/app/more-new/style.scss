@@ -1,0 +1,242 @@
+@import '../../scss/mixins';
+
+.bread-crumb-container {
+  // top: -45px;
+  transition: all 400ms;
+  padding: 16px 0px 8px 0px !important;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1280px) {
+    padding: 16px 24px 8px !important;
+  }
+
+  // @media screen and (min-width: 2561px) {
+  //   top: -45px;
+  // }
+
+  // @media screen and (max-width: 2560px) and (min-width: 2244px) {
+  //   top: -45px;
+  //   padding: 16px 0px 8px 0px !important;
+  // }
+
+  // @media screen and (max-width: 2243px) and (min-width: 2115px) {
+  //   top: -45px;
+  //   padding: 16px 0px 8px 0px !important;
+  // }
+
+  // @media screen and (max-width: 1919px) and (min-width: 1503px) {
+  //   top: -45px;
+  //   padding: 16px 0px 8px 0px !important;
+  // }
+
+  // @media screen and (max-width: 1502px) {
+  //   top: -45px;
+  //   padding: 16px 0px 8px 0px !important;
+  // }
+
+  // @media screen and (max-width: 1499px) {
+  //   top: -45px;
+  //   padding: 16px 0px 8px 0px !important;
+  // }
+
+  // @media screen and (max-width: 1487px) {
+  //   top: -45px;
+  //   padding: 16px 0px 8px 0px !important;
+  // }
+
+  // @media screen and (max-width: 1439px) {
+  //   top: -45px;
+  //   padding: 16px 0px 8px 0px !important;
+  // }
+
+  // @media screen and (max-width: 1356px) {
+  //   top: -45px;
+  //   padding: 16px 0px 8px 0px !important;
+  // }
+
+  // @media screen and (max-width: 1293px) {
+  //   top: -45px;
+  //   padding: 16px 0px 8px 0px !important;
+  // }
+
+  // @media screen and (max-width: 1292px) {
+  //   top: -45px;
+  //   padding: 16px 0px 8px 0px !important;
+
+  // }
+
+  // @media screen and (max-width: 1280px) {
+  //   top: -45px;
+  //   padding: 16px 24px 8px 24px !important;
+  // }
+
+  // @media screen and (max-width: 1255px) {
+  //   top: -45px;
+  // }
+
+  // @media screen and (max-width: 1187px) {
+  //   top: -45px;
+  // }
+
+  // @media screen and (max-width: 1167px) {
+  //   top: -45px;
+  // }
+
+  // @media screen and (max-width: 1055px) {
+  //   top: -45px;
+  // }
+
+  // @media screen and (max-width: 1036px) {
+  //   top: -45px;
+  // }
+
+  // @media screen and (max-width: 1023px) {
+  //   top: -45px;
+  // }
+
+  // @media screen and (max-width: 962px) {
+  //   top: -45px;
+  // }
+
+  // @media screen and (max-width: 936px) {
+  //   top: -45px;
+  // }
+
+  // @media screen and (max-width: 916px) {
+  //   top: -45px;
+  // }
+
+  // @media screen and (max-width: 786px) {
+  //   top: -45px;
+  // }
+
+  // @media screen and (max-width: 767px) {
+  //   top: -45px;
+  // }
+
+  // @media screen and (max-width: 639px) {
+  //   top: -45px;
+  // }
+
+  // @media screen and (max-width: 530px) {
+  //   top: -45px;
+  // }
+
+  // @media screen and (max-width: 426px) {
+  //   top: -45px;
+  // }
+
+  // @media screen and (max-width: 407px) {
+  //   top: -45px;
+  // }
+
+  // @media screen and (max-width: 397px) {
+  //   top: -45px;
+  // }
+
+  // @media screen and (max-width: 396px) and (min-width: 388px) {
+  //   top: -45px;
+  // }
+
+  // @media screen and (max-width: 375px) {
+  //   top: -45px;
+  // }
+
+  // @media screen and (max-width: 324px) {
+  //   top: -45px;
+  // }
+
+  .MuiCollapse-root {
+    margin-top: 0 !important;
+  }
+
+  .collapse-breadcrumbs {
+    position: absolute;
+    // top: 100%;
+    // left: 120px;
+    top: 60px;
+    z-index: 1;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 2px 2px 5px #aaaaaa;
+    width: 320px;
+
+    @media screen and (max-width: 425px) {
+      left: 90px;
+      width: 250px;
+    }
+
+    @media screen and (max-width: 320px) {
+      left: 40px;
+      width: 250px;
+    }
+
+    .header-breabcrumb_text {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #d4a650;
+      border-radius: 12px 12px 0 0;
+      padding: 8px 0;
+      color: #ffffff;
+      font-size: 16px;
+    }
+
+    .box-breadcrumbs {
+      max-height: 256px;
+      overflow-y: scroll;
+      display: 'flex';
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      margin: 8px 16px;
+
+      span {
+        font-size: 12px;
+      }
+    }
+
+    .wrapBtn-breadcrumb_nav {
+      margin: 16px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .btn-breadcrumb_nav {
+        cursor: pointer;
+        border-radius: 5px;
+        align-items: center;
+        // width: 100%;
+        // width: 323px;
+        background-color: #d4a650;
+        color: #ffffff;
+        border: none;
+        outline: none;
+        padding: 12px 24px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #ccc;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: ccc;
+      border-radius: 20px;
+      border: 100px solid #1b87f5;
+    }
+  }
+}
+
+// .css-pa55th-MuiStack-root>:not(style)+:not(style) {
+//   margin-top: 210px !important;
+
+// }

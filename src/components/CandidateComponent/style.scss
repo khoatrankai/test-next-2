@@ -1,0 +1,214 @@
+.container-candidate {
+    .candidate {
+        max-width: 1080px;
+        padding: 0px 0;
+        padding-top: 52px;
+        margin: 20px auto;
+        // margin: 176px auto;
+
+        @media screen and (max-width: 1080px) {
+            padding: 0px 24px;
+        }
+
+        .header-candidate {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h3 {
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 2.5rem;
+                /* 125% */
+            }
+
+            .ant-btn {
+                padding: 12px 24px;
+                gap: 12px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 48px;
+                flex-shrink: 0;
+                border-radius: 37px;
+                background: rgba(37, 37, 37, 1);
+                transition: all 0.3 linear;
+                margin-right: 10px;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                &:active {
+                    transform: scale(0.9);
+                }
+            }
+        }
+
+        ;
+
+        .search-candidate {
+            p {
+                font-family: Roboto;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.75rem;
+                /* 140% */
+            }
+
+            // .list-search {
+            //     display: flex;
+            //     flex-direction: column;
+            //     gap: 24px;
+            //     .list-search_top {
+            //         display: flex;
+            //         gap: 24px;
+            //         align-items: center;
+            //     }
+
+            //     .list-search_bottom {
+            //         display: flex;
+            //         gap: 24px;
+            //         align-items: center;
+            //         .submit-search {
+            //             width: 100%;
+            //             display: flex;
+            //             gap: 24px;
+            //             .submit-seach_button {
+            //                 display: flex;
+            //                 width: 160px;
+            //                 height: 48px;
+            //                 padding: 12px 16px;
+            //                 justify-content: center;
+            //                 align-items: center;
+            //                 gap: 10px;
+            //                 flex-shrink: 0;
+            //                 box-shadow: 1px 1px 5px #ccc;
+            //                 border-radius: 10px;
+            //             }
+
+            //             .seach-button_Confirm {
+            //                 background-color: #000;
+            //                 color: #fff;
+            //             }
+
+            //             .seach-button_Reset {
+
+            //             }
+
+            //         }
+            //     }
+            // }
+
+            .list-search {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 12px;
+
+                @media screen and (max-width: 1080px) {
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                @media screen and (max-width: 600px) {
+                    grid-template-columns: 1fr;
+                }
+
+                .submit-search {
+                    width: 100%;
+                    display: flex;
+                    gap: 24px;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .submit-seach_button {
+                        display: flex;
+                        width: 45%;
+                        // height: 48px;
+                        height: 100%;
+                        // padding: 12px 16px;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        flex-shrink: 0;
+                        box-shadow: 1px 1px 5px #ccc;
+                        border-radius: 10px;
+                        cursor: pointer;
+
+                        @media screen and (max-width: 600PX) {
+                            height: 40px;
+
+                        }
+                    }
+
+                    .seach-button_Confirm {
+                        background-color: #000;
+                        color: #fff;
+                    }
+
+                    .seach-button_Reset {}
+
+                }
+            }
+        }
+
+        ;
+
+        .list-candidates {
+            .list-candidates_title {
+                margin: 24px 0px 12px 12px;
+            }
+
+            .list-candidate {
+
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 24px;
+
+                @media screen and (max-width: 1080px) {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 24px;
+
+                }
+
+                @media screen and (max-width: 780px) {
+                    grid-template-columns: 1fr;
+                    gap: 24px;
+
+                }
+            }
+        }
+
+        ;
+    }
+
+}
+
+.ant-select-dropdown-placement-bottomLeft {
+    z-index: 8 !important;
+}
+
+.rc-virtual-list {
+    .rc-virtual-list-holder {
+        max-height: 100% !important;
+    }
+
+    .rc-virtual-list-scrollbar {
+        display: none !important;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: ccc;
+    border-radius: 20px;
+    border: 100px solid #1b87f5;
+}

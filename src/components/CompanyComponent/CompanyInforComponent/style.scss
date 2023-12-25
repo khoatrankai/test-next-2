@@ -1,0 +1,521 @@
+.company-container {
+    .company-content {
+        padding: 0px 0px 50px 0px;
+        max-width: 1080px;
+        margin: 0 auto 36px auto;
+        transition: all linear 0.3s;
+
+        .company-title {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 32px;
+            padding-right: 20px;
+
+            .company-title_top {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .company-title_bottom {
+                p {
+                    font-family: Roboto;
+                    font-size: 14px;
+                    font-style: italic;
+                    font-weight: 400;
+                    letter-spacing: 0em;
+                    text-align: left;
+
+                }
+            }
+        }
+
+        @media screen and (max-width: 1080px) {
+            padding-inline: 24px !important;
+        }
+
+        .edit-logo-company-container {
+            // margin-top: 32px;
+
+            .edit-logo-company-content {
+
+                label {
+                    font-size: 14px;
+                }
+
+                .company-logo {
+                    margin-top: 8px;
+
+                    .ant-upload-list-item-container,
+                    .ant-upload-select {
+                        width: 160px !important;
+                        height: 160px !important;
+                        border: 1px solid rgba(87, 87, 87, 1);
+                        border-radius: 8px;
+                        cursor: pointer;
+                    }
+
+                    .ant-upload-list-item-container {
+                        .ant-upload-list-item {
+                            padding: 0 !important;
+                            border-color: rgba(87, 87, 87, 1) !important;
+
+                            &::before {
+                                width: 100% !important;
+                                height: 100% !important;
+                            }
+
+                            .ant-upload-list-item-thumbnail {
+                                img {
+                                    border-radius: 8px;
+                                    object-fit: cover !important;
+                                }
+                            }
+
+                            .ant-upload-list-item-progress {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .edit-name-tax-company-container {
+            display: flex;
+            gap: 32px;
+            margin-top: 24px;
+
+            .edit-name-company,
+            .edit-tax-company {
+                flex: 1;
+
+                label {
+                    font-size: 14px;
+                }
+
+                .MuiInputBase-input {
+                    font-size: 14px;
+                }
+
+                .Mui-disabled {
+                    -webkit-text-fill-color: #000;
+                }
+
+            }
+
+            @media screen and (max-width: 590px) {
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+
+        .edit-address-company-container {
+            margin-top: 24px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+
+            .edit-address-company {
+                display: flex;
+                gap: 32px;
+
+                @media screen and (max-width: 590px) {
+                    flex-direction: column;
+                    gap: 24px;
+                }
+
+                .edit-titleAddress {
+                    flex: 1;
+
+                    label {
+                        font-size: 14px;
+                    }
+
+                    #jobTitle {
+                        font-size: 14px;
+                    }
+
+                    .MuiInputBase-input {
+                        font-size: 14px;
+                    }
+
+                    .Mui-disabled {
+                        -webkit-text-fill-color: #000;
+                    }
+                }
+            }
+        }
+
+        .edit-phone-mail-company-container {
+            margin-top: 24px;
+            display: flex;
+            gap: 32px;
+
+            .edit-phone-company,
+            .edit-mail-company {
+                flex: 1;
+
+                label {
+                    font-size: 14px;
+                }
+
+                .MuiInputBase-input {
+                    font-size: 14px;
+                }
+
+                .Mui-disabled {
+                    -webkit-text-fill-color: #000;
+                }
+
+            }
+
+            @media screen and (max-width: 590px) {
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+
+        #editJob {
+            font-size: 14px;
+        }
+
+        .edit-role-web-company-container {
+            display: flex;
+            margin-top: 24px;
+            gap: 32px;
+
+
+            .edit-role-company,
+            .edit-web-company {
+                flex: 1;
+
+                label {
+                    font-size: 14px;
+                }
+
+                .MuiInputBase-input {
+                    font-size: 14px;
+                }
+
+                .Mui-disabled {
+                    -webkit-text-fill-color: #000;
+                }
+
+            }
+
+            @media screen and (max-width: 590px) {
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+
+        .edit-field-scale-company-container {
+            display: flex;
+            margin-top: 24px;
+            gap: 32px;
+
+            .edit-field-company,
+            .edit-scale-company {
+                flex: 1;
+
+                label {
+                    font-size: 14px;
+                }
+
+                .MuiInputBase-input {
+                    font-size: 14px;
+                }
+
+                .Mui-disabled {
+                    -webkit-text-fill-color: #000;
+                }
+
+            }
+
+            @media screen and (max-width: 590px) {
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+
+        .edit-des-company-container {
+            margin-top: 24px;
+
+            .edit-des-company {
+                .MuiInputBase-input {
+                    font-size: 14px;
+                }
+
+                .Mui-disabled {
+                    -webkit-text-fill-color: #000;
+                }
+            }
+        }
+
+        .edit-image-company-container {
+            margin-top: 24px;
+
+            .edit-image-company-content {
+                h3 {
+                    margin-bottom: 8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    color: #000000;
+                    font-weight: 700;
+                    font-size: 14px;
+
+                    p {
+                        cursor: pointer;
+                        color: #d4a650;
+                        text-align: right;
+                        font-family: Roboto;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        // line-height: 24px;
+                        /* 150% */
+                    }
+                }
+
+                .company-images {
+                    // border: 1px solid #ccc;
+                    padding: 0;
+                    border-radius: 5px;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    cursor: pointer;
+                    // height: 310px;
+
+                    &:hover {
+                        border-color: #d4a650;
+                    }
+
+                    .drag-img-container {
+                        // min-height: 150px;
+
+                        .dropzone {
+                            position: absolute;
+                            border: 1px solid transparent;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            flex: 1;
+                            gap: 8px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            // padding: 20px;
+                            border-radius: 2px;
+                            background-color: transparent;
+                            color: #bdbdbd;
+                            outline: none;
+                            transition: border .24s ease-in-out;
+                            justify-content: center;
+                            z-index: 1;
+
+                            .drag-img-camera {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                gap: 8px;
+                                justify-content: center;
+
+                                p {
+                                    font-size: 14px;
+                                }
+                            }
+
+                            .thumbs-containter {
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                gap: 16px;
+                                width: 100%;
+
+                                .thumb {
+                                    display: inline-flex;
+                                    border-radius: 2;
+                                    border: 1px solid #eaeaea;
+                                    margin-bottom: 8;
+                                    margin-right: 8;
+                                    width: 100;
+                                    height: 100;
+                                    padding: 4;
+                                    box-sizing: border-box;
+
+                                    .thumb-inner {
+                                        display: flex;
+                                        min-width: 0;
+                                        overflow: hidden;
+                                        position: relative;
+
+                                        .deleteButton {
+                                            position: absolute;
+                                            top: 6px;
+                                            right: 6px;
+                                            border: solid 1px #ccc;
+                                            width: 24px;
+                                            height: 24px;
+                                            background-color: #878080;
+                                            cursor: pointer;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                        }
+
+                                        img {
+                                            display: block;
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .on-drag {
+                            border: 1px dashed #d4a650;
+                            background-color: #e3e2e2;
+                            color: #d4a650;
+                            transition: all 0.2s ease-in-out;
+                        }
+                    }
+
+                    .list_iamges {
+                        display: flex;
+                        width: 100%;
+                        // justify-content: space-between;
+                        flex-wrap: wrap;
+                        gap: 8px;
+
+                        .item-image {
+                            position: relative;
+                            // margin-right: 12px;
+                            height: 176px;
+                            width: 185px;
+
+                            img {
+                                border: 1px solid #ccc;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+
+                            .deleteButton {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                position: absolute;
+                                top: 1px;
+                                right: 1px;
+                                width: 44px;
+                                height: 44px;
+                                background: rgba(0, 0, 0, 0.5);
+                                cursor: pointer;
+                                z-index: 2;
+                            }
+                        }
+                    }
+                }
+
+                @media screen and (max-width: 379px) {
+                    // width: 320px;
+                    width: 100%;
+
+                    .input-title {
+                        padding: 12px;
+                        height: 52px;
+                        font-size: 16px;
+                    }
+                }
+
+                @media screen and (min-width: 380px) and (max-width: 449px) {
+                    // width: 380px;
+                    width: 100%;
+
+                    .input-title {
+                        padding: 12px;
+                        height: 52px;
+                        font-size: 16px;
+                    }
+
+                    .input-content {
+                        padding: 12px;
+                        font-size: 16px;
+                    }
+
+                }
+
+                @media screen and (min-width: 450px) and (max-width: 600px) {
+                    // width: 440px;
+                    width: 100%;
+
+                    .input-title {
+                        padding: 12px;
+                        height: 52px;
+                        font-size: 16px;
+                    }
+
+                    .input-content {
+                        padding: 12px;
+                        font-size: 16px;
+                    }
+                }
+
+                @media screen and (min-width: 601px) and (max-width: 767px) {
+                    // width: 500px;
+                    width: 100%;
+
+                    .input-title {
+                        padding: 12px;
+                        height: 52px;
+                        font-size: 16px;
+                    }
+
+                    .input-content {
+                        padding: 12px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+
+        h1 {
+            // text-align: center;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 24px;
+        }
+
+        .btn-edit_submitForm {
+            margin-top: 24px;
+            border-radius: 5px;
+            align-items: center;
+            width: 100%;
+            background-color: #d4a650;
+            color: #ffffff;
+            // box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.35);
+            // color: rgb(220, 220, 220, 1);
+
+            border: none;
+            outline: none;
+            padding: 16px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 18px;
+            cursor: pointer;
+        }
+    }
+}
+
+.ant-modal {
+    
+}

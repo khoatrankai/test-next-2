@@ -1,0 +1,42 @@
+.filter-candidate {
+    position: relative;
+    width: 100%;
+    .filter-input_candidate {
+        position: absolute;
+        z-index: 10;
+        top: 12px;
+        left: 10px;
+    }
+
+    .ant-select {
+        .ant-select-selector {
+            .ant-select-selection-item {
+                margin-left: 20px;
+                font-size: 12px;
+
+            }
+
+            .ant-select-selection-placeholder {
+                font-size: 12px;
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+.wrap-radio_candidate {
+    .title-candidate {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
+        h3 {
+
+        }
+    }
+
+    .ant-radio-group {
+        margin: 12px 0;
+    }
+}

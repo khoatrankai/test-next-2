@@ -1,0 +1,37 @@
+@mixin breakpoint($point) {
+  @if $point ==tablet {
+    @media screen and (max-width: 768px) and (min-width: 427px) {
+      @content;
+    }
+  }
+
+  @else if $point ==mobile {
+    @media screen and (max-width: 426px) {
+      @content;
+    }
+  }
+
+  @else if $point ==largeTablet {
+    @media screen and (max-width: 1024px) and (min-width: 769px) {
+      @content;
+    }
+  }
+
+  @else if $point ==destop {
+    @media screen and (max-width: 1440px) and (min-width: 1025px) {
+      @content;
+    }
+  }
+
+  @else if $point ==an_order {
+    @media screen and (min-width: 1441px) {
+      @content;
+    }
+  }
+}
+
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 1024px;
+$breakpoint-desktop: 1200px;
+$breakpoint-largeDesktop: 1440px;

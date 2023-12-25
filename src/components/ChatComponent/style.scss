@@ -1,0 +1,152 @@
+@import '../../scss/mixins';
+@import '../../scss/variable';
+
+.message-page {
+  height: 100%;
+  overflow: hidden;
+
+  .message-page_main {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 30px 24px !important;
+    height: 90%;
+
+    @media screen and (min-width:1281px) and (max-width: 3600px) {
+      padding: 35px 0px 0 0px !important;
+    }
+
+    @media screen and (min-width: 1120px) and (max-width: 1280px) {
+      padding: 35px 0px 0 0px !important;
+    }
+
+    @media screen and (min-width: 1025px) and (max-width: 1119px) {
+      padding: 35px 24px 0 24px !important;
+    }
+
+    @include breakpoint(largeTablet) {
+      padding: 24px 24px;
+    }
+
+    @include breakpoint(tablet) {
+      padding: 20px 20px;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 20px 20px;
+      display: none;
+    }
+
+    .header-message {
+      display: flex;
+      align-items: center;
+    }
+
+    .wrap-content_message {
+      display: flex;
+      box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      height: 760px;
+      height: calc(90vh - 70px);
+
+      .message-page_left {
+        height: 100%;
+        width: 35%;
+
+        @media screen and (max-width: 555px) {
+          display: none !important;
+        }
+
+        @include breakpoint(tablet) {
+          width: 50%;
+        }
+      }
+
+      .message-page_right {
+        height: 100%;
+        width: 65%;
+
+        @include breakpoint(mobile) {
+          display: none !important;
+        }
+
+        @media screen and (max-width: 555px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .message-page-main_responsive {
+    display: none;
+    padding: 10px;
+    margin: 12px auto;
+    padding-top: 170px !important;
+    height: 100%;
+
+    @include breakpoint(mobile) {
+      display: block;
+      margin: 0;
+      padding: 0;
+
+      .wrap-content-message_responsive {
+        display: flex;
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        height: 540px;
+        margin-top: 12px;
+
+        @include breakpoint(mobile) {
+        }
+
+        .message-page-left_responsive {
+          height: 100%;
+          width: 100%;
+        }
+
+        .message-page-right_responsive {
+          display: none;
+        }
+      }
+    }
+
+    @media screen and (max-width: 555px) {
+      display: block;
+      margin: 0;
+      padding: 0;
+
+      .wrap-content-message_responsive {
+        display: flex;
+
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        margin-top: 12px;
+        margin: 0;
+        height: 100%;
+        padding: 0 24px;
+
+        .message-page-left_responsive {
+          height: 100%;
+          width: 100%;
+        }
+
+        .message-page-right_responsive {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: ccc;
+  border-radius: 20px;
+  border: 1px solid #1b87f5;
+}

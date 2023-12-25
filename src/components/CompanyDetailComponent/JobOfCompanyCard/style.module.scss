@@ -1,0 +1,170 @@
+@import '../../../scss/mixins';
+
+.job_of_company_card {
+
+
+    .MuiGrid-item {
+        @media (max-width: 425px) {
+            height: 122px;
+            max-width: 100% !important;
+        }
+
+        @media (max-width: 768px) {
+            max-width: 100% !important;
+        }
+    }
+
+    .div_card_post {
+        // width: 65%;
+        width: 100%;
+
+        .MuiImageListItem-img {
+            width: 120px !important;
+            height: 120px !important;
+        }
+
+        .div_card_post_info {
+            padding: 0;
+            margin-left: 0 !important;
+            display: flex;
+            flex-direction: column;
+            height: 120px;
+            justify-content: space-between;
+            // width: 80%;
+            width: calc(100% - 132px);
+
+            .MuiTypography-root:nth-child(1),
+            .MuiTypography-root:nth-child(2) {
+                width: 100% !important;
+            }
+
+            @media screen and (max-width: 899px) and (min-width: 769px) {
+
+                // width: 85% !important;
+                // width: calc(100% - 132px);
+                .MuiTypography-root {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    word-break: break-all;
+                    white-space: normal;
+                }
+            }
+
+            &__title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 8px;
+            }
+
+            &__name {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 8px;
+            }
+
+            &__jobtype {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 8px;
+            }
+
+            @include breakpoint(mobile) {
+
+                // width: 94%;
+                width: 60%;
+
+                div:last-child {
+                    margin: 0 !important;
+                }
+            }
+        }
+
+        .MuiTypography-h6 {
+            @include breakpoint(mobile) {
+                font-size: 12px;
+                width: 75% !important;
+            }
+
+            @include breakpoint(tablet) {
+                // width: 90% !important
+            }
+
+            @include breakpoint(largeTablet) {
+                width: 100% !important;
+            }
+        }
+
+        .MuiTypography-h1 {
+            @include breakpoint(mobile) {
+                font-size: 10px;
+                width: 75% !important;
+            }
+
+            // @include breakpoint(tablet) {
+            //     width: 90% !important
+            // }
+
+            // @include breakpoint(largeTablet) {
+            //     width: 90% !important
+            // }
+        }
+
+        .MuiTypography-body2 {
+            @include breakpoint(mobile) {
+                font-size: 10px;
+                width: 65% !important;
+            }
+
+            @include breakpoint(tablet) {
+                width: 90% !important
+            }
+
+            @include breakpoint(largeTablet) {
+                width: 90% !important
+            }
+        }
+
+        .MuiImageListItem-root {
+            align-items: center;
+        }
+
+        @include breakpoint(mobile) {
+            // width: 70%;
+        }
+
+        &_info {
+            width: 100%;
+
+            // &__icon {
+            // font-size: small;
+            // }
+        }
+    }
+
+    .div_card_post-right {
+        width: 100px;
+        align-items: flex-end;
+
+        @include breakpoint(mobile) {
+            width: 30%;
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            height: 84%;
+        }
+
+        @include breakpoint(largeTablet) {
+            width: 30%;
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            height: 78%;
+        }
+    }
+}

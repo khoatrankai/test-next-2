@@ -1,0 +1,193 @@
+@import '../../../scss/mixins';
+
+.company-card-container {
+    border: 1px solid #E5E5E5;
+    box-shadow: 2px 2px 5px #ccc;;
+
+    .MuiGrid-item {
+        @media (max-width: 425px) {
+            height: 122px;
+            max-width: 100% !important;
+        }
+
+        @media (max-width: 768px) {
+            max-width: 100% !important;
+        }
+    }
+
+    .div-card-company_content {
+        // width: 65%;
+        width: 100%;
+
+        .MuiImageListItem-img {
+            width: 72px !important;
+            height: 72px !important;
+            min-width: 72px;
+            border-radius: 8px;
+        }
+
+        .div-card-company_info {
+            padding: 0;
+            margin-left: 0 !important;
+            display: flex;
+            flex-direction: column;
+            height: 72px;
+            justify-content: space-between;
+            width: 100%;
+            // width: calc(100% - 132px);
+
+            .MuiTypography-root:nth-child(1),
+            .MuiTypography-root:nth-child(2) {
+                width: 100% !important;
+            }
+
+            @media screen and (max-width: 899px) and (min-width: 769px) {
+
+                // width: 85% !important;
+                // width: calc(100% - 132px);
+                .MuiTypography-root {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    word-break: break-all;
+                    white-space: normal;
+                }
+            }
+
+            &__title {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 8px;
+
+                .MuiTypography-h6 {
+                    display: -webkit-box !important;
+                    -webkit-line-clamp: 2 !important;
+                    -webkit-box-orient: vertical !important;
+                    overflow: hidden !important;
+                }
+            }
+
+            &__bot {
+                display: flex;
+                // justify-content: space-between;
+                align-items: center;
+                gap: 0px 24px;
+                flex-wrap: wrap;
+
+                @media screen and (min-width: 769px) and (max-width: 810px) {
+                    gap: 0px;
+                    justify-content: space-between;
+                }
+
+                .info-bot-icon {
+                    display: grid;
+                    place-items: center;
+                }
+
+                &__item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    max-width: 120px;
+
+
+                }
+            }
+
+            @include breakpoint(mobile) {
+
+                // width: 94%;
+                width: 100%;
+
+                div:last-child {
+                    margin: 0 !important;
+                }
+            }
+        }
+
+        .MuiTypography-h6 {
+            @include breakpoint(mobile) {
+                font-size: 12px;
+                width: 75% !important;
+            }
+
+            @include breakpoint(tablet) {
+                // width: 90% !important
+            }
+
+            @include breakpoint(largeTablet) {
+                width: 100% !important;
+            }
+        }
+
+        .MuiTypography-h1 {
+            @include breakpoint(mobile) {
+                font-size: 10px;
+                width: 75% !important;
+            }
+
+            // @include breakpoint(tablet) {
+            //     width: 90% !important
+            // }
+
+            // @include breakpoint(largeTablet) {
+            //     width: 90% !important
+            // }
+        }
+
+        .MuiTypography-body2 {
+            @include breakpoint(mobile) {
+                font-size: 10px;
+                width: 65% !important;
+            }
+
+            @include breakpoint(tablet) {
+                width: 90% !important
+            }
+
+            @include breakpoint(largeTablet) {
+                width: 90% !important
+            }
+        }
+
+        .MuiImageListItem-root {
+            align-items: center;
+        }
+
+        @include breakpoint(mobile) {
+            // width: 70%;
+        }
+
+        &_info {
+            width: 100%;
+
+            // &__icon {
+            // font-size: small;
+            // }
+        }
+    }
+
+    .div-card-post-right {
+        width: 100px;
+        align-items: flex-end;
+
+        @include breakpoint(mobile) {
+            width: 30%;
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            height: 84%;
+        }
+
+        @include breakpoint(largeTablet) {
+            width: 30%;
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            height: 78%;
+        }
+    }
+}
