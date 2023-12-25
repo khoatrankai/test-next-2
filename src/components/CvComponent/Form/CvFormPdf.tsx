@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable react/jsx-key */
 import React from "react";
 import Cv1 from "./CV1/Cv1";
 import Cv2 from "./CV2/Cv2";

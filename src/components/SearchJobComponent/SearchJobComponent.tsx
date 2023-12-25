@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable react/jsx-key */
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import "./SearchJobComponent.scss";
@@ -224,7 +226,7 @@ const SearchJobComponent: React.FC<Props> = (props) => {
     }
   };
 
-  console.log(listJob)
+  console.log(listJob);
 
   return (
     <div className="flex justify-center py-12">

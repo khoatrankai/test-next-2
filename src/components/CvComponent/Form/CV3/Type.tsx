@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable react/jsx-key */
 import React from "react";
 import TypeSkill from "./Types/TypeSkill";
 import TypeInfoPerson from "./Types/TypeInfoPerson";

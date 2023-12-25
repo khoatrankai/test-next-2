@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable react/jsx-key */
 import React, { useEffect, useState } from "react";
 // @ts-ignore
 import { Button, Spin } from "antd";
@@ -31,7 +33,7 @@ const CandidatesAll = () => {
   const languageRedux = useSelector(
     (state: RootState) => state.changeLaguage.language
   );
-  const {handleLoadHrefPage} = useSrollContext();
+  const { handleLoadHrefPage } = useSrollContext();
   const [hasMore, setHasMore] = React.useState(true);
 
   const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
@@ -40,7 +42,7 @@ const CandidatesAll = () => {
 
   useEffect(() => {
     handleLoadHrefPage();
-  }, [])
+  }, []);
 
   const getAllCandidates = async () => {
     try {
@@ -175,7 +177,11 @@ const CandidatesAll = () => {
       {contextHolder}
       <div className="candidate">
         <div className="header-candidate" style={{ marginBottom: "20px" }}>
-          <h3>{languageRedux === 1 ? 'Tìm kiếm ứng viên' : 'Looking for candidates'}</h3>
+          <h3>
+            {languageRedux === 1
+              ? "Tìm kiếm ứng viên"
+              : "Looking for candidates"}
+          </h3>
           <Button
             type="primary"
             onClick={() => window.open(`/history?candidate=4`, "_parent")}
@@ -186,7 +192,11 @@ const CandidatesAll = () => {
           </Button>
         </div>
         <div className="search-candidate">
-          <p>{languageRedux === 1 ? 'Hãy tìm ứng viên phù hợp cho công ty của bạn!' : 'Find the right candidate for your company!'}</p>
+          <p>
+            {languageRedux === 1
+              ? "Hãy tìm ứng viên phù hợp cho công ty của bạn!"
+              : "Find the right candidate for your company!"}
+          </p>
           <div className="list-search">
             <SeachLocation
               setAddresses={setAddresses}

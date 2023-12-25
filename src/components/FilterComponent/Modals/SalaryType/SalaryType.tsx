@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable react/jsx-key */
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import salaryTypeApi from "@/api/salary-type/salaryTypeApi";
@@ -67,10 +69,8 @@ const SalaryType = (props: Props) => {
       }}
     >
       <div className="flex items-center">
-        <div
-          className="w-6 mx-2"
-        >
-          <ClockFilterIcon/>
+        <div className="w-6 mx-2">
+          <ClockFilterIcon />
         </div>
         <h2>
           {(

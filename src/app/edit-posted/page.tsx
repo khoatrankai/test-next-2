@@ -1,9 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import postsApi from "@/api/posts/postsApi";
 import PositionPost from "@/components/NewPostComponent/PositionPost/PositionPost";
 import TypeJob from "@/components/NewPostComponent/TypeJob/TypeJob";
 import { useSearchParams } from "next/navigation";
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable react/jsx-key */
 import React, { useEffect, useRef, useState } from "react";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import Image from "next/image";

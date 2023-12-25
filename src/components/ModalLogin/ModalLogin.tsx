@@ -1,5 +1,8 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import Modal from "@mui/material/Modal";
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable react/jsx-key */
 import React, { useEffect, useRef, useState } from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";

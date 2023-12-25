@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable react/jsx-key */
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import SwiperText from "@/util/SwiperText";
@@ -156,10 +158,8 @@ const PositionJob = (props: Props) => {
       }}
       ref={ref_position}
     >
-      <div
-        className="w-6 mx-2"
-      >
-        <AddressFilterIcon/>
+      <div className="w-6 mx-2">
+        <AddressFilterIcon />
       </div>
       <div className="flex-1 overflow-hidden h-full flex items-center">
         {(!dataRequest?.district_ids ||

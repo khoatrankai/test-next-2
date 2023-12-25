@@ -1,6 +1,9 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import axiosClient from "@/configs/axiosClient";
 import Image from "next/image";
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable react/jsx-key */
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 

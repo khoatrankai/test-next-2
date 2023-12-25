@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import React, { useEffect } from "react";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";

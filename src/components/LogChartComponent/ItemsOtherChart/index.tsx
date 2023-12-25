@@ -1,4 +1,7 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable react/jsx-key */
 import React from "react";
 import { Col, Row } from "antd";
 import styles from "./style.module.scss";

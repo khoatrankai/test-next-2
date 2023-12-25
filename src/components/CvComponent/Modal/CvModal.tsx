@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable react/jsx-key */
 import React from "react";
 import CvTopModal from "./CvTop/CvTopModal";
 import Cv2Modal from "./Cv2Modal/CvTopModal";

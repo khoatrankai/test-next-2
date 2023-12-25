@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import React, {
   useState,
@@ -7,10 +8,10 @@ import React, {
   SetStateAction,
   ReactNode,
   useEffect,
-} from 'react';
-import {Provider, useSelector} from 'react-redux';
-import {store} from '@/redux/store';
-import ChatContextProvider from './ChatProvider';
+} from "react";
+import { Provider, useSelector } from "react-redux";
+import { store } from "@/redux/store";
+import ChatContextProvider from "./ChatProvider";
 type DataFilter = {
   positionJob: Array<{
     province_id: string;

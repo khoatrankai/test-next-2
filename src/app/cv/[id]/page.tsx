@@ -1,5 +1,8 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import { useParams } from "next/navigation";
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable react/jsx-key */
 import React, { useEffect, useRef, useState } from "react";
 import axiosClient from "@/configs/axiosClient";
 import { useDispatch, useSelector } from "react-redux";

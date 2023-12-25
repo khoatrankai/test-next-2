@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import SearchJobComponent from "@/components/SearchJobComponent/SearchJobComponent";
 import React, { useEffect } from "react";

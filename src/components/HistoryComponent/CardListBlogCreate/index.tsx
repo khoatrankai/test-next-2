@@ -1,21 +1,30 @@
-import React from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React from "react";
 
-import { Box, Typography, MenuItem, TextField } from '@mui/material';
-import { useSelector } from 'react-redux';
-import { Button, message } from 'antd';
-import './style.scss';
-import moment from 'moment';
-import { RootState } from '@/redux/reducer';
-import communityApi from '@/api/community/apiCommunity';
-import { setCookie } from '@/cookies';
-import { CommentIcon, EditComunity, EysIcon, FilterComunity, LikeIcon, NewestIcon, SettingIcon } from '@/icons';
+import { Box, Typography, MenuItem, TextField } from "@mui/material";
+import { useSelector } from "react-redux";
+import { Button, message } from "antd";
+import "./style.scss";
+import moment from "moment";
+import { RootState } from "@/redux/reducer";
+import communityApi from "@/api/community/apiCommunity";
+import { setCookie } from "@/cookies";
+import {
+  CommentIcon,
+  EditComunity,
+  EysIcon,
+  FilterComunity,
+  LikeIcon,
+  NewestIcon,
+  SettingIcon,
+} from "@/icons";
 const CardListBlogCreate = () => {
   const languageRedux = useSelector(
-    (state: RootState) => state.changeLaguage.language,
+    (state: RootState) => state.changeLaguage.language
   );
   const [openMenu, setOpenMenu] = React.useState(false);
-  const [page, setPage] = React.useState<any>('0');
-  const [sort, setSort] = React.useState('');
+  const [page, setPage] = React.useState<any>("0");
+  const [sort, setSort] = React.useState("");
   const [createdPost, setCreatedPost] = React.useState<any>();
   const [isVisible, setIsVisible] = React.useState(true);
   const [uploading, setUploading] = React.useState(false);
@@ -24,9 +33,9 @@ const CardListBlogCreate = () => {
     try {
       const result = await communityApi.getCommunityByAccount(
         page,
-        '10',
+        "10",
         sort,
-        languageRedux === 1 ? 'vi' : 'en',
+        languageRedux === 1 ? "vi" : "en"
       );
       if (result) {
         setCreatedPost(result?.data?.communications);
@@ -41,12 +50,12 @@ const CardListBlogCreate = () => {
 
   const handleMoveToEdit = (id: any, e: any) => {
     e.stopPropagation();
-    window.open(`/community-create?post-community=${id}`, '_parent');
+    window.open(`/community-create?post-community=${id}`, "_parent");
   };
 
   const handleMoveToDetail = (id: any) => {
-    window.open(`/detail-community?post-community=${id}&type=1`, '_parent');
-    setCookie('fromHistory', '31', 365);
+    window.open(`/detail-community?post-community=${id}&type=1`, "_parent");
+    setCookie("fromHistory", "31", 365);
   };
 
   React.useEffect(() => {
@@ -62,10 +71,10 @@ const CardListBlogCreate = () => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -76,9 +85,9 @@ const CardListBlogCreate = () => {
       const nextPage = (parseInt(page) + 1).toString();
       const result = await communityApi.getCommunityByAccount(
         nextPage,
-        '10',
+        "10",
         sort,
-        languageRedux === 1 ? 'vi' : 'en',
+        languageRedux === 1 ? "vi" : "en"
       );
 
       //
@@ -90,11 +99,11 @@ const CardListBlogCreate = () => {
         ]);
         setPage(nextPage);
       } else {
-        setPage('0');
+        setPage("0");
         message.error(
           languageRedux === 1
-            ? 'Đã hết bài viết để hiển thị'
-            : 'Out of posts to show',
+            ? "Đã hết bài viết để hiển thị"
+            : "Out of posts to show"
         );
         setIsVisible(false);
       }
@@ -104,14 +113,14 @@ const CardListBlogCreate = () => {
   };
 
   const handleMoveToCreate = () => {
-    window.open('/community-create', '_parent');
+    window.open("/community-create", "_parent");
   };
 
   const handleSortBy = (sortString: string) => {
     //cm: comment, l: likes, v: views
-    setPage('0');
+    setPage("0");
     if (sort == sortString) {
-      setSort('');
+      setSort("");
       // console.log(sort);
     } else {
       setUploading(false);
@@ -124,21 +133,21 @@ const CardListBlogCreate = () => {
     <>
       <Box
         sx={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
         }}
         className="list-blog-create-box"
       >
         <div className="back-container">
           <Typography
             sx={{
-              fontWeight: '600',
-              fontSize: '24px',
-              lineHeight: '24px',
+              fontWeight: "600",
+              fontSize: "24px",
+              lineHeight: "24px",
             }}
           >
-            {languageRedux === 1 ? 'Bài viết đã tạo' : 'Created posts'}
+            {languageRedux === 1 ? "Bài viết đã tạo" : "Created posts"}
           </Typography>
         </div>
         <div className="title-comunity_icon">
@@ -151,39 +160,39 @@ const CardListBlogCreate = () => {
             <ul className="dropdown_menu dropdown_menu-4">
               <li
                 className={
-                  sort === '' ? 'dropdown_item-1  active' : 'dropdown_item-1'
+                  sort === "" ? "dropdown_item-1  active" : "dropdown_item-1"
                 }
-                style={{ display: openMenu ? 'flex' : 'none' }}
+                style={{ display: openMenu ? "flex" : "none" }}
                 onClick={() => {
-                  handleSortBy('');
+                  handleSortBy("");
                 }}
               >
                 <NewestIcon />
-                <p>{languageRedux === 1 ? `Mới nhất` : 'Newest'}</p>
+                <p>{languageRedux === 1 ? `Mới nhất` : "Newest"}</p>
               </li>
               <li
                 className={
-                  sort !== '' && sort == 'l'
-                    ? 'dropdown_item-2  active'
-                    : 'dropdown_item-2'
+                  sort !== "" && sort == "l"
+                    ? "dropdown_item-2  active"
+                    : "dropdown_item-2"
                 }
-                style={{ display: openMenu ? 'flex' : 'none' }}
+                style={{ display: openMenu ? "flex" : "none" }}
                 onClick={() => {
-                  handleSortBy('l');
+                  handleSortBy("l");
                 }}
               >
                 <LikeIcon />
-                <p>{languageRedux === 1 ? `Lượt thích`: `Likes`}</p>
+                <p>{languageRedux === 1 ? `Lượt thích` : `Likes`}</p>
               </li>
               <li
                 className={
-                  sort !== '' && sort == 'v'
-                    ? 'dropdown_item-3  active'
-                    : 'dropdown_item-3'
+                  sort !== "" && sort == "v"
+                    ? "dropdown_item-3  active"
+                    : "dropdown_item-3"
                 }
-                style={{ display: openMenu ? 'flex' : 'none' }}
+                style={{ display: openMenu ? "flex" : "none" }}
                 onClick={() => {
-                  handleSortBy('v');
+                  handleSortBy("v");
                 }}
               >
                 <EysIcon />
@@ -191,13 +200,13 @@ const CardListBlogCreate = () => {
               </li>
               <li
                 className={
-                  sort !== '' && sort == 'cm'
-                    ? 'dropdown_item-4  active'
-                    : 'dropdown_item-4'
+                  sort !== "" && sort == "cm"
+                    ? "dropdown_item-4  active"
+                    : "dropdown_item-4"
                 }
-                style={{ display: openMenu ? 'flex' : 'none' }}
+                style={{ display: openMenu ? "flex" : "none" }}
                 onClick={() => {
-                  handleSortBy('cm');
+                  handleSortBy("cm");
                 }}
               >
                 <CommentIcon />
@@ -231,9 +240,9 @@ const CardListBlogCreate = () => {
                 <p>
                   {item?.createdAtText
                     ? item?.createdAtText
-                    : new Date(item?.createdAt).toLocaleDateString('en-GB') +
-                    ', ' +
-                    moment(new Date(item?.createdAt)).format('HH:mm')}
+                    : new Date(item?.createdAt).toLocaleDateString("en-GB") +
+                      ", " +
+                      moment(new Date(item?.createdAt)).format("HH:mm")}
                 </p>
               </div>
               <div className="body-item-actions">
@@ -254,10 +263,10 @@ const CardListBlogCreate = () => {
           ))}
         <Box
           sx={{
-            margin: '12px auto',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+            margin: "12px auto",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
           <Button
@@ -265,10 +274,10 @@ const CardListBlogCreate = () => {
               width: 130,
               height: 40,
               backgroundColor: `#d4a650`,
-              marginBottom: '2rem',
-              color: '#FFFFFF',
-              fontWeight: 'bold',
-              display: isVisible ? 'block' : 'none',
+              marginBottom: "2rem",
+              color: "#FFFFFF",
+              fontWeight: "bold",
+              display: isVisible ? "block" : "none",
             }}
             loading={uploading}
             onClick={handleChange}

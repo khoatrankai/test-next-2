@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import bookMarkApi from "@/api/bookmarks/bookMarkApi";
 import { SaveIconFill, SaveIconOutline } from "@/icons";

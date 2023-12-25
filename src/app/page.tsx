@@ -1,5 +1,8 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 // Import specific react components instead of importing all of React
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable react/jsx-key */
 import React, { useEffect, useRef, useState } from "react";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";

@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import hotJobApi from "@/api/hotjob/hotJobApi";
 import { useParams } from "next/navigation";

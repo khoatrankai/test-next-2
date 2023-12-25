@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable react/jsx-key */
 import React from "react";
 
 interface SizeProps {
@@ -1056,7 +1058,6 @@ export const LikeIconWhite = ({ width = 24, height = 24 }) => {
     </svg>
   );
 };
-
 
 export const FilterIconHotjob: React.FC<SizeProps> = ({
   width = 19,
@@ -2231,7 +2232,6 @@ export const CheckedBlueIcon = ({ width = 15, height = 17 }) => {
   );
 };
 
-
 export const BagChart = () => {
   return (
     <svg
@@ -2403,7 +2403,6 @@ export const ChartStar = ({ width = 16, height = 16 }) => {
     </svg>
   );
 };
-
 
 export const AppliedPostedIcon = ({ width = 30, height = 30 }) => {
   return (

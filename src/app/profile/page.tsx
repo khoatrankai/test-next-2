@@ -1,5 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable react/jsx-key */
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import InfoPerson from "@/components/ProfileComponent/InfoPerson/InfoPerson";

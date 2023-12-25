@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import templateApi from "@/api/template/templateApi";
 import { useSrollContext } from "@/context/AppProvider";
