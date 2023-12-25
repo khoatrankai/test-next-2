@@ -61,7 +61,7 @@ const TypeSkill = (props: Props) => {
         <View style={styles.viewMain}>
           {data?.moreCvExtraInformations?.map((dt: any) => {
             return (
-              <View style={styles.viewTP}>
+              <View style={styles.viewTP} key={""}>
                 <View style={styles.viewItemSmall}>
                   <Text style={styles.textItem}>{dt.company}</Text>
                 </View>
